@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cross-ai-reels
+    env: python
+    buildCommand: pip install -r requirements.txt && playwright install chromium
+    startCommand: python app.py
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
